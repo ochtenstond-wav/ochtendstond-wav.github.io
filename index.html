@@ -1,460 +1,472 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ebben Dassonville - cinematic videograaf voor events, fashion, artiesten en social content." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ochtendstond.WAV - Cinematic Visuals" />
+  <meta property="og:description" content="Cinematic visuals voor artiesten, creators, events, fashion en social content." />
+  <meta property="og:image" content="https://fakdaenalderest.com/assets/FDS-groepsfoto.jpg" />
+  <meta property="og:url" content="https://fakdaenalderest.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ochtendstond.WAV - Cinematic Visuals" />
+  <meta name="twitter:description" content="Cinematic visuals voor artiesten, creators, events, fashion en social content." />
+  <meta name="twitter:image" content="https://fakdaenalderest.com/assets/FDS-groepsfoto.jpg" />
+  <link rel="canonical" href="https://fakdaenalderest.com/" />
 
-<title>Ebben — Visuals</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="icon" type="image/jpeg" href="assets/favicon.png.jpg" />
+  <link rel="shortcut icon" type="image/jpeg" href="assets/favicon.png.jpg" />
+  <link rel="apple-touch-icon" href="assets/favicon.png.jpg" />
+  <link rel="preload" as="image" href="assets/FDS-groepsfoto.jpg">
+  <link rel="stylesheet" href="style.css" />
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:-apple-system,BlinkMacSystemFont,sans-serif;
-background:#0d0d0d;
-color:white;
-padding:40px 20px;
-display:flex;
-justify-content:center;
-}
-
-.app{
-width:100%;
-max-width:700px;
-}
-
-.hero{
-margin-bottom:40px;
-}
-
-.hero p{
-font-size:12px;
-letter-spacing:3px;
-opacity:0.6;
-margin-bottom:12px;
-}
-
-.hero h1{
-font-size:56px;
-line-height:0.95;
-font-weight:600;
-margin-bottom:20px;
-}
-
-.hero span{
-color:#8b7dff;
-}
-
-.hero-desc{
-font-size:15px;
-line-height:1.7;
-opacity:0.75;
-max-width:500px;
-}
-
-.tab-bar{
-display:flex;
-gap:8px;
-background:#161616;
-padding:6px;
-border-radius:14px;
-margin-bottom:30px;
-}
-
-.tab{
-flex:1;
-background:transparent;
-border:none;
-color:#888;
-padding:12px;
-border-radius:10px;
-cursor:pointer;
-font-size:13px;
-transition:0.2s;
-}
-
-.tab.active{
-background:#252525;
-color:white;
-}
-
-.panel{
-display:none;
-}
-
-.panel.active{
-display:block;
-}
-
-.form-group{
-margin-bottom:22px;
-}
-
-.form-label{
-display:block;
-font-size:13px;
-margin-bottom:8px;
-opacity:0.7;
-}
-
-input,
-textarea,
-select{
-width:100%;
-background:#161616;
-border:1px solid #252525;
-border-radius:12px;
-padding:14px;
-color:white;
-font-size:14px;
-}
-
-textarea{
-resize:vertical;
-min-height:100px;
-}
-
-.style-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:10px;
-}
-
-.style-option{
-background:#161616;
-border:1px solid #252525;
-padding:16px;
-border-radius:12px;
-cursor:pointer;
-font-size:13px;
-text-align:center;
-transition:0.2s;
-}
-
-.style-option.selected{
-background:#8b7dff;
-border-color:#8b7dff;
-color:white;
-}
-
-.progress{
-display:flex;
-gap:8px;
-margin-bottom:30px;
-}
-
-.dot{
-height:8px;
-flex:1;
-background:#222;
-border-radius:999px;
-}
-
-.dot.active{
-background:#8b7dff;
-}
-
-.nav{
-display:flex;
-justify-content:space-between;
-margin-top:30px;
-}
-
-.btn{
-padding:14px 24px;
-border:none;
-border-radius:12px;
-cursor:pointer;
-font-size:14px;
-}
-
-.btn-dark{
-background:#1a1a1a;
-color:white;
-}
-
-.btn-primary{
-background:#8b7dff;
-color:white;
-}
-
-.breakdown-card{
-background:#161616;
-border:1px solid #252525;
-border-radius:18px;
-padding:20px;
-margin-bottom:16px;
-}
-
-.breakdown-title{
-font-size:15px;
-margin-bottom:14px;
-color:#8b7dff;
-}
-
-.breakdown-text{
-font-size:14px;
-line-height:1.7;
-opacity:0.8;
-}
-
-.pill{
-display:inline-block;
-padding:8px 12px;
-background:#222;
-border-radius:999px;
-font-size:12px;
-margin:4px;
-}
-
-.dashboard-card{
-background:#161616;
-padding:20px;
-border-radius:18px;
-margin-bottom:12px;
-border:1px solid #252525;
-}
-
-.dashboard-card h3{
-font-size:15px;
-margin-bottom:8px;
-}
-
-.dashboard-card p{
-font-size:13px;
-opacity:0.7;
-}
-
-@media(max-width:700px){
-
-.hero h1{
-font-size:42px;
-}
-
-.style-grid{
-grid-template-columns:1fr;
-}
-
-}
-
-</style>
+  <title>Ebben Dassonville - Visuals</title>
 </head>
 
-<body>
+<body class="screenplay-site" data-web-app-url="https://script.google.com/macros/s/AKfycbzLbycL-A6nz-YAASXNSmbKkDYXyIheULGhSSXOK90BV1Yz51OiFy1w2h7F3xZlA-pELA/exec">
+  <header class="site-header">
+    <nav class="nav-links nav-left" aria-label="Begin navigatie">
+      <a href="#top">Fade in</a>
+      <a href="#story">Story</a>
+      <a href="#process">Treatment</a>
+    </nav>
 
-<div class="app">
+    <a href="#top" class="logo">Ochtendstond.WAV</a>
 
-<div class="hero">
-<p>CINEMATIC VISUAL STORYTELLING</p>
+    <nav class="nav-links nav-right" aria-label="Eind navigatie">
+      <a href="#intake">Draft</a>
+      <a href="#about">Character</a>
+      <a href="#contact">Fade out</a>
+    </nav>
+  </header>
 
-<h1>
-Modern visuals<br>
-with <span>emotion</span>,<br>
-energy & atmosphere.
-</h1>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Ochtendstond.WAV</h1>
 
-<div class="hero-desc">
-Ik ben Ebben, videograaf met een passie voor sterke visuals, sfeer en storytelling. Van events en fashion tot artiesten en social content.
-</div>
-</div>
+        <p class="script-label">fakdaenalderest</p>
 
-<div class="tab-bar">
-<button class="tab active" onclick="switchTab('intake', this)">
-<i class="ti ti-file-text"></i>
- Intake
-</button>
+        <p class="hero-subtitle">Cinematic visuals voor artiesten, creators, events, fashion en social content.</p>
 
-<button class="tab" onclick="switchTab('breakdown', this)">
-<i class="ti ti-layout-list"></i>
- Breakdown
-</button>
+        <div class="script-credit">
+          <span>Written & directed by</span>
+          <strong>Ebben Dassonville</strong>
+        </div>
 
-<button class="tab" onclick="switchTab('dashboard', this)">
-<i class="ti ti-layout-dashboard"></i>
- Dashboard
-</button>
-</div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#intake">Start project</a>
+          <a class="btn btn-secondary" href="#work">Bekijk projecten</a>
+        </div>
+      </div>
+    </section>
 
-<div id="intake" class="panel active">
+    <section id="story" class="section story-page">
+      <p class="page-number">2.</p>
+      <p class="transition">FADE IN:</p>
+      <p class="slugline">INT. OCHTENDSTOND.WAV - CREATIVE ROOM - DAY</p>
 
-<div class="progress">
-<div class="dot active"></div>
-<div class="dot active"></div>
-<div class="dot"></div>
-<div class="dot"></div>
-</div>
+      <p class="action">
+        Ik ben Ebben, videograaf met een passie voor mooie beeldjes en sfeer. Mijn ambitie is om een eigen creatief productiehuis op te bouwen waar ik samenwerk met gelijkgestemde makers aan unieke en authentieke projecten.
+      </p>
 
-<div class="form-group">
-<label class="form-label">Naam / bedrijf</label>
-<input type="text" id="name" placeholder="Studio, artiest of merk">
-</div>
+      <p class="character">OCHTENDSTOND.WAV</p>
+      <p class="dialogue">Voor creators, artiesten, entrepreneurs en vooral mensen die creatief samen willen werken.</p>
 
-<div class="form-group">
-<label class="form-label">Wat wil je laten maken?</label>
-<textarea id="project" placeholder="Beschrijf kort jouw project"></textarea>
-</div>
+      <p class="action">
+        Mijn focus ligt op het versterken van artiesten, creators en merken door middel van krachtige visuals, meeslepende verhalen en een professionele maar ontspannen samenwerking. Sterke content moet niet alleen mooi zijn, maar ook gevoel overbrengen en blijven hangen.
+      </p>
 
-<div class="form-group">
-<label class="form-label">Stijl / sfeer</label>
+      <p class="transition">CUT TO:</p>
+    </section>
 
-<div class="style-grid">
+    <section id="work" class="section">
+      <div class="section-head">
+        <p class="eyebrow">SELECTED WORK</p>
+        <h2>Project types</h2>
+      </div>
 
-<div class="style-option" onclick="toggle(this)">
-Moody
-</div>
+      <div class="projects">
+        <a class="project-card" href="work-fasion.html" aria-label="Bekijk fashion campaign portfolio">
+          <img src="assets/foto TOM 4 (1).png" alt="Fashion editorial sfeerbeeld" class="uitgezoomd" loading="lazy" decoding="async">
+          <div class="overlay">
+            <p>01</p>
+            <h3>Fashion Campaign</h3>
+            <span>Bekijk werk</span>
+          </div>
+        </a>
 
-<div class="style-option" onclick="toggle(this)">
-Luxury
-</div>
+        <a class="project-card" href="work-music.html" aria-label="Bekijk music visual portfolio">
+          <img class="music-visual-img" src="assets/FDS-groepsfoto.jpg" alt="Music visual sfeerbeeld" loading="lazy" decoding="async">
+          <div class="overlay">
+            <p>02</p>
+            <h3>Music Visual</h3>
+            <span>Bekijk werk</span>
+          </div>
+        </a>
 
-<div class="style-option" onclick="toggle(this)">
-Documentary
-</div>
+        <a class="project-card" href="work-events.html" aria-label="Bekijk live event portfolio">
+          <div class="project-image-placeholder" aria-hidden="true">
+            <span>LIVE EVENT FRAME</span>
+          </div>
+          <div class="overlay">
+            <p>03</p>
+            <h3>Live Event</h3>
+            <span>Bekijk werk</span>
+          </div>
+        </a>
+      </div>
+    </section>
 
-<div class="style-option" onclick="toggle(this)">
-Energetic
-</div>
+    <section id="process" class="section process-section">
+      <div class="section-head">
+        <p class="eyebrow">PROCESS & CONTRACTS</p>
+        <h2>Van eerste idee naar duidelijke afspraken.</h2>
+        <p class="section-sub">
+          Elk project start met een korte analyse van artiest, merk, muziek, stijl en doel. Daarna kiezen we samen
+          het pakket dat past bij de productie, planning, rechten en gewenste afwerking.
+        </p>
+      </div>
 
-</div>
-</div>
+      <div class="process-grid">
+        <div class="workflow-list" aria-label="Werkwijze">
+          <article class="workflow-step">
+            <span>01</span>
+            <div>
+              <h3>Intake & analyse</h3>
+              <p>We verzamelen je contactgegevens, referenties, muziek, moodboard, platformen en open vragen.</p>
+            </div>
+          </article>
 
-<div class="form-group">
-<label class="form-label">Locatie</label>
-<input type="text" placeholder="Gent, Brussel...">
-</div>
+          <article class="workflow-step">
+            <span>02</span>
+            <div>
+              <h3>Creatieve richting</h3>
+              <p>Ik onderzoek stijl, sfeer, vergelijkbare makers en de visuele kansen rond je project.</p>
+            </div>
+          </article>
 
-<div class="form-group">
-<label class="form-label">Deadline</label>
-<input type="text" placeholder="Wanneer moet het klaar zijn?">
-</div>
+          <article class="workflow-step">
+            <span>03</span>
+            <div>
+              <h3>Pakket & contract</h3>
+              <p>We leggen draaidagen, revisies, leveringen, rechten, planning, prijs en voorschot helder vast.</p>
+            </div>
+          </article>
 
-<div class="nav">
-<button class="btn btn-dark">
-Opslaan
-</button>
+          <article class="workflow-step">
+            <span>04</span>
+            <div>
+              <h3>Shoot & post-productie</h3>
+              <p>Na de draaidag volgt selectie, montage, colorgrading, sound design en export in de juiste formaten.</p>
+            </div>
+          </article>
+        </div>
 
-<button class="btn btn-primary" onclick="generateBreakdown()">
-Genereer breakdown
-</button>
-</div>
+        <div class="package-explorer">
+          <div class="package-tabs" role="tablist" aria-label="Pakketkeuze">
+            <button class="package-option active" type="button" role="tab" aria-selected="true" data-package="basic">Basic</button>
+            <button class="package-option" type="button" role="tab" aria-selected="false" data-package="standard">Standaard</button>
+            <button class="package-option" type="button" role="tab" aria-selected="false" data-package="premium">Premium</button>
+            <button class="package-option" type="button" role="tab" aria-selected="false" data-package="custom">Custom</button>
+          </div>
 
-</div>
+          <article class="package-detail active" data-package-detail="basic">
+            <p class="package-label">PAKKET BASIC</p>
+            <h3>Compacte productie met duidelijke focus.</h3>
+            <ul>
+              <li>1 draaidag tot max. 4 uur opname</li>
+              <li>1 video van ongeveer 60 tot 90 seconden</li>
+              <li>Basis colorgrading en 1 exportformaat</li>
+              <li>1 revisieronde</li>
+            </ul>
+            <p class="package-note">Richtprijs: EUR 300 - 700. Ideaal voor een gerichte social video of snelle visuele campagne.</p>
+          </article>
 
-<div id="breakdown" class="panel">
+          <article class="package-detail" data-package-detail="standard">
+            <p class="package-label">PAKKET STANDAARD</p>
+            <h3>Een hoofdvideo met extra social cutdown.</h3>
+            <ul>
+              <li>1 tot 2 draaidagen</li>
+              <li>1 hoofdvideo + 1 korte social media-cutdown</li>
+              <li>Uitgebreide colorgrading en basis sound design</li>
+              <li>2 revisierondes en 2 formaten</li>
+            </ul>
+            <p class="package-note">Richtprijs: EUR 700 - 1.500. Goed voor artiesten, events of merken die meer distributie nodig hebben.</p>
+          </article>
 
-<div class="breakdown-card">
+          <article class="package-detail" data-package-detail="premium">
+            <p class="package-label">PAKKET PREMIUM</p>
+            <h3>Meer draaidagen, meer formats, meer afwerking.</h3>
+            <ul>
+              <li>2 tot 3 draaidagen inclusief behind-the-scenes</li>
+              <li>1 hoofdvideo + maximaal 3 social cutdowns</li>
+              <li>Geavanceerde colorgrading, sound design en motion graphics</li>
+              <li>3 revisierondes en prioritaire planning</li>
+            </ul>
+            <p class="package-note">Richtprijs: EUR 1.500 - 3.000. Voor campagnes waar beeldtaal, planning en impact zwaarder wegen.</p>
+          </article>
 
-<div class="breakdown-title">
-Project concept
-</div>
+          <article class="package-detail" data-package-detail="custom">
+            <p class="package-label">PAKKET CUSTOM</p>
+            <h3>Volledig op maat met creatieve regie.</h3>
+            <ul>
+              <li>Aantal draaidagen, crew en planning in overleg</li>
+              <li>Concepting, regie en volledige post-productie</li>
+              <li>Alle gewenste formaten, ondertitels en motion graphics mogelijk</li>
+              <li>Revisies binnen de afgesproken scope</li>
+            </ul>
+            <p class="package-note">Prijs op aanvraag. Voor projecten met specifieke rechten, grotere scope of volledige campagnebegeleiding.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<div class="breakdown-text" id="concept">
-Vul eerst het intakeformulier in.
-</div>
+    <section id="intake" class="section">
+      <div class="section-head">
+        <p class="eyebrow">CLIENT INTAKE</p>
+        <h2>Vertel kort wat je wil maken.</h2>
+        <p class="section-sub">
+          Vier korte stappen. Vul enkel in wat je al weet; losse ideeen, ruwe planning of een paar links zijn genoeg
+          om het project op te starten.
+        </p>
+      </div>
 
-</div>
+      <div class="system-card">
+        <div class="tab-bar" role="tablist" aria-label="Intake systeem">
+          <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="intake-panel" id="tab-intake-panel" data-tab="intake-panel"><i class="ti ti-file-text" aria-hidden="true"></i> Intake</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="breakdown-panel" id="tab-breakdown-panel" data-tab="breakdown-panel"><i class="ti ti-layout-list" aria-hidden="true"></i> Preview</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="dashboard-panel" id="tab-dashboard-panel" data-tab="dashboard-panel"><i class="ti ti-layout-dashboard" aria-hidden="true"></i> Dashboard</button>
+        </div>
 
-<div class="breakdown-card">
+        <div id="intake-panel" class="panel active" role="tabpanel" aria-labelledby="tab-intake-panel">
+          <div class="progress-bar">
+            <div class="step-dot active" id="dot-0"></div>
+            <div class="step-dot" id="dot-1"></div>
+            <div class="step-dot" id="dot-2"></div>
+            <div class="step-dot" id="dot-3"></div>
+            <span id="step-label">Stap 1 van 4 - Project</span>
+          </div>
 
-<div class="breakdown-title">
-Shotlist
-</div>
+          <form id="client-form" novalidate>
+            <div class="form-step active" data-step="0">
+              <h3>Over jouw project</h3>
+              <p>Vertel me kort wat je idee is.</p>
 
-<div id="shots"></div>
+              <label>
+                Naam / bedrijf
+                <input id="clientName" name="Naam / bedrijf" type="text" placeholder="Bijv. Studio Bloom, artiest, merk..." required>
+              </label>
 
-</div>
+              <label>
+                E-mailadres
+                <input id="clientEmail" name="email" type="email" placeholder="naam@email.com" required>
+              </label>
 
-<div class="breakdown-card">
+              <label>
+                Telefoon of Instagram
+                <input id="clientContact" name="Telefoon of Instagram" type="text" placeholder="Bijv. @instagram of telefoonnummer">
+              </label>
 
-<div class="breakdown-title">
-Equipment
-</div>
+              <label>
+                Wat wil je laten maken?
+                <textarea id="projectIdea" name="Projectomschrijving" placeholder="Bijv. Een brand video voor Instagram, max. 60 seconden..." required></textarea>
+              </label>
 
-<div id="equipment"></div>
+              <div class="field-block">
+                <span id="goals-label">Doel van de video</span>
+                <div class="option-grid" data-group="goals">
+                  <button type="button" class="option">Short Form Content (max 60 sec)</button>
+                  <button type="button" class="option">Advertentie</button>
+                  <button type="button" class="option">Brand</button>
+                  <button type="button" class="option">Event</button>
+                  <button type="button" class="option">Fotoshoot</button>
+                  <button type="button" class="option">Storytelling</button>
+                  <button type="button" class="option">Serie</button>
+                  <button type="button" class="option">Movie</button>
+                  <button type="button" class="option">Sfeer</button>
+                </div>
+              </div>
+            </div>
 
-</div>
+            <div class="form-step" data-step="1">
+              <h3>Stijl & sfeer</h3>
+              <p>Klik alles aan wat past bij jouw visie.</p>
 
-</div>
+              <div class="field-block">
+                <span id="styles-label">Sfeer</span>
+                <div class="option-grid" data-group="styles">
+                  <button type="button" class="option">Moody</button>
+                  <button type="button" class="option">Luxury</button>
+                  <button type="button" class="option">Documentary</button>
+                  <button type="button" class="option">Energetic</button>
+                  <button type="button" class="option">Clean</button>
+                  <button type="button" class="option">Raw</button>
+                </div>
+              </div>
 
-<div id="dashboard" class="panel">
+              <label>
+                Referenties
+                <textarea id="references" name="Referenties" placeholder="Plak links naar video's, Instagram-accounts, YouTube, Pinterest..."></textarea>
+              </label>
+            </div>
 
-<div class="dashboard-card">
-<h3>Fashion campaign</h3>
-<p>Deadline — 14 juni</p>
-</div>
+            <div class="form-step" data-step="2">
+              <h3>Locatie & timing</h3>
+              <p>Praktische info voor de voorbereiding.</p>
 
-<div class="dashboard-card">
-<h3>Artist visualizer</h3>
-<p>Editing fase</p>
-</div>
+              <label>
+                Locatie
+                <input id="location" name="Locatie" type="text" placeholder="Bijv. Gent, Brussel, studio, buitenlocatie...">
+              </label>
 
-</div>
+              <label>
+                Opnamedatum / periode
+                <input id="shootDate" name="Opnamedatum / periode" type="text" placeholder="Bijv. tweede helft van juni, zo snel mogelijk...">
+              </label>
 
-</div>
+              <label>
+                Deadline
+                <input id="deadline" name="Deadline" type="text" placeholder="Wanneer moet de video klaar zijn?">
+              </label>
+            </div>
 
-<script>
+            <div class="form-step" data-step="3">
+              <h3>Deliverables</h3>
+              <p>Wat verwacht je concreet als eindresultaat?</p>
 
-function switchTab(id, btn){
+              <div class="field-block">
+                <span id="formats-label">Formaten</span>
+                <div class="option-grid" data-group="formats">
+                  <button type="button" class="option">Verticaal 9:16</button>
+                  <button type="button" class="option">Horizontaal 16:9</button>
+                  <button type="button" class="option">Vierkant 1:1</button>
+                  <button type="button" class="option">Extra reels</button>
+                </div>
+              </div>
 
-document.querySelectorAll('.panel').forEach(panel=>{
-panel.classList.remove('active');
-});
+              <label>
+                Muziek / audio
+                <select id="music" name="Muziek / audio">
+                  <option value="">Kies...</option>
+                  <option>Klant kiest passende muziek</option>
+                  <option>Ochtendstond.WAV kiest muziek</option>
+                  <option>Geen muziek nodig</option>
+                  <option>Voice-over gewenst</option>
+                </select>
+              </label>
 
-document.querySelectorAll('.tab').forEach(tab=>{
-tab.classList.remove('active');
-});
+              <label>
+                Budgetindicatie
+                <input id="budget" name="Budgetindicatie" type="text" placeholder="Bijv. EUR 250-500, nog niet beslist...">
+              </label>
 
-document.getElementById(id).classList.add('active');
+              <label>
+                Extra informatie
+                <textarea id="extraInfo" name="Extra informatie" placeholder="Wensen, vragen, speciale planning, branding assets..."></textarea>
+              </label>
 
-btn.classList.add('active');
+            </div>
 
-}
+            <p id="formStatus" class="muted form-status" role="status" aria-live="polite"></p>
 
-function toggle(el){
+            <div class="form-nav">
+              <button class="btn btn-secondary" type="button" id="backBtn">Vorige</button>
+              <button class="btn btn-primary" type="button" id="nextBtn">Volgende</button>
+            </div>
+          </form>
+        </div>
 
-el.classList.toggle('selected');
+        <div id="breakdown-panel" class="panel" role="tabpanel" aria-labelledby="tab-breakdown-panel">
+          <div id="empty-breakdown" class="empty-state">
+            <i class="ti ti-file-analytics" aria-hidden="true"></i>
+            <p>Vul eerst de intake in om de mail-preview en production breakdown te genereren.</p>
+            <button class="btn btn-primary" type="button" data-open-tab="intake-panel">Formulier invullen</button>
+          </div>
 
-}
+          <div id="breakdown-output" class="breakdown-output hidden"></div>
+        </div>
 
-function generateBreakdown(){
+        <div id="dashboard-panel" class="panel" role="tabpanel" aria-labelledby="tab-dashboard-panel">
+          <div id="dashboard-lock" class="empty-state">
+            <i class="ti ti-lock" aria-hidden="true"></i>
+            <p>Vul het host-wachtwoord in om lopende projecten te bekijken.</p>
+            <label>
+              Dashboard wachtwoord
+              <input id="dashboardPassword" type="password" autocomplete="current-password" placeholder="Wachtwoord">
+            </label>
+            <p id="dashboardError" class="muted"></p>
+            <button class="btn btn-primary" type="button" id="unlockDashboard">Dashboard openen</button>
+          </div>
 
-const project =
-document.getElementById('project').value;
+          <div id="dashboard-content" class="hidden">
+            <div class="metrics">
+              <div class="metric">
+                <span>Actieve projecten</span>
+                <strong id="metric-active">0</strong>
+              </div>
+              <div class="metric">
+                <span>Ingediend</span>
+                <strong id="metric-total">0</strong>
+              </div>
+              <div class="metric">
+                <span>Eerstvolgende shoot</span>
+                <strong id="metric-next">-</strong>
+              </div>
+            </div>
 
-document.getElementById('concept').innerHTML =
-"Cinematic production focused on atmosphere, movement, emotion and social-first storytelling for modern digital platforms.";
+            <div id="project-list" class="project-list">
+              <p class="muted">Nog geen projecten. Vul eerst de intake in.</p>
+            </div>
 
-document.getElementById('shots').innerHTML = `
-<span class="pill">Wide establishing shots</span>
-<span class="pill">Slow motion details</span>
-<span class="pill">Handheld movement</span>
-<span class="pill">Close-up emotion shots</span>
-<span class="pill">Ambient b-roll</span>
-`;
+            <div id="project-detail" class="breakdown-output hidden"></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-document.getElementById('equipment').innerHTML = `
-<span class="pill">Sony FX3</span>
-<span class="pill">24-70mm Lens</span>
-<span class="pill">Gimbal</span>
-<span class="pill">LED Lighting</span>
-<span class="pill">Drone</span>
-`;
+    <section id="about" class="section about-section">
+      <div class="about-copy">
+        <div class="section-head">
+          <p class="eyebrow">CHARACTER</p>
+          <h2>Ebben Dassonville.</h2>
+        </div>
 
-switchTab(
-'breakdown',
-document.querySelectorAll('.tab')[1]
-);
+        <p class="about-text">
+          Ik maak visuals vanuit sfeer, emotie en intentie. Of het nu gaat om artiesten, fashion, evenementen of merken, het verhaal en de visie van de maker staan altijd centraal.
+        </p>
 
-}
+        <p class="about-text">
+          Mijn aanpak vertrekt niet vanuit trends, maar vanuit gevoel. Door middel van visuele referenties, betekenisvolle details en creatieve keuzes vertaal ik emoties naar beelden die blijven hangen.
+          Van conceptontwikkeling tot montage werk ik met aandacht voor ritme, styling, storytelling en impact.
+        </p>
+      </div>
 
-</script>
+      <figure class="about-portrait">
+        <img src="assets/selfie.jpg" alt="Zelfportret van Ebben Dassonville" loading="lazy" decoding="async">
+        <figcaption>Ebben Dassonville / Ochtendstond.WAV</figcaption>
+      </figure>
+    </section>
 
+    <section id="contact" class="section contact-section">
+      <div class="section-head">
+        <p class="eyebrow">CONTACT</p>
+        <h2>Ready to work contact us!</h2>
+      </div>
+
+      <div class="contact-links">
+        <a href="mailto:ochtenstond@gmail.com">ochtenstond@gmail.com</a>
+        <a href="https://www.instagram.com/ochtendstond.wav?igsh=ajE4MWltejZzbTgy&utm_source=qr" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Ebben Dassonville - Ochtendstond.wav</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
